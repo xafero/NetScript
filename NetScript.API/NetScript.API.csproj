@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{57457658-EDB4-4262-BDAA-320D1B3D40E7}</ProjectGuid>
+    <ProjectGuid>{599BC770-7929-4B21-B2B4-C6CEA2357C79}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>NetScript.Impl.Vsa</RootNamespace>
-    <AssemblyName>NetScript.Impl.Vsa</AssemblyName>
+    <RootNamespace>NetScript.API</RootNamespace>
+    <AssemblyName>NetScript.API</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
@@ -30,28 +30,11 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.JScript, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic.Vsa">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Vsa">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IScriptHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VsaHelper.cs" />
-    <Compile Include="VsaScriptHost.cs" />
-    <Compile Include="VsaSite.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NetScript.API\NetScript.API.csproj">
-      <Project>{599BC770-7929-4B21-B2B4-C6CEA2357C79}</Project>
-      <Name>NetScript.API</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,14 +9,12 @@ namespace NetScript.Impl.Vsa
 		public static IVsaEngine CreateEngine(string lang)
 		{
 			switch (lang) {
-				case "VB":
-				case "Visual Basic":
+				case "VBScript":
 					return new Microsoft.VisualBasic.Vsa.VsaEngine();
 				case "JScript":
-				case "JScript.NET":
 					return new Microsoft.JScript.Vsa.VsaEngine();
 				default:
-					throw new Exception(string.Format("Unknown Engine '{0}'!", lang));
+					throw new Exception(string.Format("Unknown engine '{0}'!", lang));
 			}
 		}
 	}

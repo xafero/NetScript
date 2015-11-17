@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Test", "NetScript
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Impl.Vsa", "NetScript.Impl.Vsa\NetScript.Impl.Vsa.csproj", "{57457658-EDB4-4262-BDAA-320D1B3D40E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Impl.Cdom", "NetScript.Impl.Cdom\NetScript.Impl.Cdom.csproj", "{97A05498-5F1D-4743-BFC0-FA96CDB54B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.API", "NetScript.API\NetScript.API.csproj", "{599BC770-7929-4B21-B2B4-C6CEA2357C79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +24,13 @@ Global
 		{57457658-EDB4-4262-BDAA-320D1B3D40E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57457658-EDB4-4262-BDAA-320D1B3D40E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57457658-EDB4-4262-BDAA-320D1B3D40E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A05498-5F1D-4743-BFC0-FA96CDB54B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A05498-5F1D-4743-BFC0-FA96CDB54B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A05498-5F1D-4743-BFC0-FA96CDB54B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A05498-5F1D-4743-BFC0-FA96CDB54B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal

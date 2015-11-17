@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.Vsa;
+using NetScript.API;
 
 namespace NetScript.Impl.Vsa
 {
 	#pragma warning disable 612, 618
-	public class VsaScriptHost : IDisposable
+	public class VsaScriptHost : IScriptHost
 	{
 		private IVsaEngine engine;
 		private VisualSite site;

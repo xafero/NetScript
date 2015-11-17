@@ -37,10 +37,19 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CdomTests.cs" />
     <Compile Include="VsaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NetScript.API\NetScript.API.csproj">
+      <Project>{599BC770-7929-4B21-B2B4-C6CEA2357C79}</Project>
+      <Name>NetScript.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetScript.Impl.Cdom\NetScript.Impl.Cdom.csproj">
+      <Project>{97A05498-5F1D-4743-BFC0-FA96CDB54B29}</Project>
+      <Name>NetScript.Impl.Cdom</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetScript.Impl.Vsa\NetScript.Impl.Vsa.csproj">
       <Project>{57457658-EDB4-4262-BDAA-320D1B3D40E7}</Project>
       <Name>NetScript.Impl.Vsa</Name>

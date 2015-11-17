@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NetScript.Impl.Vsa;
+using NetScript.API;
 using NUnit.Framework;
 
 namespace NetScript.Test
@@ -11,15 +12,15 @@ namespace NetScript.Test
 		[Test]
 		public void GetVbScript()
 		{
-			var engine = VsaHelper.CreateEngine("VB");
+			var engine = VsaHelper.CreateEngine("VBScript");
 			Assert.AreEqual(engine.GetType().FullName, "Microsoft.VisualBasic.Vsa.VsaEngine");
 			Assert.AreEqual(engine.GetType().AssemblyQualifiedName.Split(',')[2], " Version=8.0.0.0");
 		}
 		
 		[Test]
-		public void GetVbHost()
+		public void GetVbsHost()
 		{
-			var host = new VsaScriptHost("VB");
+			IScriptHost host = new VsaScriptHost("VBScript");
 			Assert.IsNotNull(host);
 		}
 		
@@ -34,7 +35,7 @@ namespace NetScript.Test
 		[Test]
 		public void GetJsHost()
 		{
-			var host = new VsaScriptHost("JScript");
+			IScriptHost host = new VsaScriptHost("JScript");
 			Assert.IsNotNull(host);
 		}
 	}
