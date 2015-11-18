@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{A542F2C2-F228-4423-B443-B9860BA2E5AB}</ProjectGuid>
+    <ProjectGuid>{B313C132-7F8E-488C-988A-ADA76DA3086D}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>NetScript.Test</RootNamespace>
-    <AssemblyName>NetScript.Test</AssemblyName>
+    <RootNamespace>NetScript.Impl.Mca</RootNamespace>
+    <AssemblyName>NetScript.Impl.Mca</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
@@ -33,16 +33,17 @@
     <Reference Include="Microsoft.CodeAnalysis.Scripting">
       <HintPath>..\..\..\..\Portable\Nuget\Microsoft.CodeAnalysis.Scripting.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Vsa" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\Libs\nunit.framework.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting.CSharp">
+      <HintPath>..\..\..\..\Portable\Nuget\Microsoft.CodeAnalysis.Scripting.CSharp.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Scripting.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting.VisualBasic">
+      <HintPath>..\..\..\..\Portable\Nuget\Microsoft.CodeAnalysis.Scripting.VisualBasic.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Scripting.VisualBasic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CdomTests.cs" />
-    <Compile Include="McaTests.cs" />
-    <Compile Include="VsaTests.cs" />
+    <Compile Include="McaHelper.cs" />
+    <Compile Include="McaScriptHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,21 +51,6 @@
       <Project>{599BC770-7929-4B21-B2B4-C6CEA2357C79}</Project>
       <Name>NetScript.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NetScript.Impl.Cdom\NetScript.Impl.Cdom.csproj">
-      <Project>{97A05498-5F1D-4743-BFC0-FA96CDB54B29}</Project>
-      <Name>NetScript.Impl.Cdom</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetScript.Impl.Mca\NetScript.Impl.Mca.csproj">
-      <Project>{B313C132-7F8E-488C-988A-ADA76DA3086D}</Project>
-      <Name>NetScript.Impl.Mca</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetScript.Impl.Vsa\NetScript.Impl.Vsa.csproj">
-      <Project>{57457658-EDB4-4262-BDAA-320D1B3D40E7}</Project>
-      <Name>NetScript.Impl.Vsa</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
