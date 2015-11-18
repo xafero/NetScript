@@ -21,6 +21,9 @@ namespace NetScript.Impl.Cdom
 				case "JS":
 				case "JScript":
 					return new Microsoft.JScript.JScriptCodeProvider();
+				case "F#":
+				case "FSharp":
+					return new FSharp.Compiler.CodeDom.FSharpCodeProvider();
 				default:
 					throw new Exception(string.Format("Unknown provider '{0}'!", lang));
 			}
