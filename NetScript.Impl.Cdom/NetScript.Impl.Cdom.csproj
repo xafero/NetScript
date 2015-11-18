@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="VJSharpCodeProvider" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CdomHelper.cs" />
