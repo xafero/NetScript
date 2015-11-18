@@ -54,5 +54,20 @@ namespace NetScript.Test
 			IScriptHost host = new CdomScriptHost("J#");
 			Assert.IsNotNull(host);
 		}
+		
+		[Test]
+		public void GetJScript()
+		{
+			var engine = CdomHelper.CreateProvider("JScript");
+			Assert.AreEqual(engine.GetType().FullName, "Microsoft.JScript.JScriptCodeProvider");
+			Assert.AreEqual(engine.GetType().AssemblyQualifiedName.Split(',')[2], " Version=8.0.0.0");
+		}
+		
+		[Test]
+		public void GetJScriptHost()
+		{
+			IScriptHost host = new CdomScriptHost("JScript");
+			Assert.IsNotNull(host);
+		}
 	}
 }
