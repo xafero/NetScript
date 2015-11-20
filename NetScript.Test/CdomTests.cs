@@ -21,8 +21,24 @@ namespace NetScript.Test
 		[Test]
 		public void GetVbHost()
 		{
-			IScriptHost host = new CdomScriptHost("VB");
-			Assert.IsNotNull(host);
+			using (IScriptHost host = new CdomScriptHost("VB"))
+			{
+				Assert.IsNotNull(host);
+				var code =
+					"Public Class Person "+'\n'+
+					"   Private myName As String "+'\n'+
+					"	Public Property Name() As String "+'\n'+
+					"		Get "+'\n'+
+					"			Return myName "+'\n'+
+					"		End Get "+'\n'+
+					"		Set "+'\n'+
+					"			myName = Value "+'\n'+
+					"		End Set "+'\n'+
+					"	End Property "+'\n'+
+					"End Class";
+				var type = host.Eval(code);
+				Assert.AreEqual(type+"", "Person");
+			}
 		}
 		
 		[Test]

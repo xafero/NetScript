@@ -31,10 +31,10 @@ namespace NetScript.Impl.Cdom
 			if (res.Errors.HasErrors)
 				throw new ScriptException(res.Errors);
 			var ass = res.CompiledAssembly;
-			var types = ass.GetTypes();
-			if (types.Length == 1)
+			var types = ass.GetTypes().Where(t => t.Namespace != "My");
+			if (types.Count() == 1)
 				return types.First();
-			return types;
+			return types.ToArray();
 		}
 		
 		public void Dispose()
