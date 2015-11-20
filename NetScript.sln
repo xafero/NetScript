@@ -10,8 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Impl.Cdom", "NetS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.API", "NetScript.API\NetScript.API.csproj", "{599BC770-7929-4B21-B2B4-C6CEA2357C79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Impl.Mca", "NetScript.Impl.Mca\NetScript.Impl.Mca.csproj", "{B313C132-7F8E-488C-988A-ADA76DA3086D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScript.Impl.Iron", "NetScript.Impl.Iron\NetScript.Impl.Iron.csproj", "{A7776FA5-88C9-411F-A9B6-10F6692301C8}"
 EndProject
 Global
@@ -36,10 +34,6 @@ Global
 		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{599BC770-7929-4B21-B2B4-C6CEA2357C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B313C132-7F8E-488C-988A-ADA76DA3086D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B313C132-7F8E-488C-988A-ADA76DA3086D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B313C132-7F8E-488C-988A-ADA76DA3086D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B313C132-7F8E-488C-988A-ADA76DA3086D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7776FA5-88C9-411F-A9B6-10F6692301C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7776FA5-88C9-411F-A9B6-10F6692301C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7776FA5-88C9-411F-A9B6-10F6692301C8}.Release|Any CPU.Build.0 = Release|Any CPU

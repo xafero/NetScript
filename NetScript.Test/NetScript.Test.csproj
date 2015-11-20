@@ -30,9 +30,6 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeAnalysis.Scripting">
-      <HintPath>..\..\..\..\Portable\Nuget\Microsoft.CodeAnalysis.Scripting.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Scripting">
       <HintPath>..\..\..\..\Portable\Nuget\IronPython.2.7.5\lib\Net40\Microsoft.Scripting.dll</HintPath>
     </Reference>
@@ -45,7 +42,6 @@
   <ItemGroup>
     <Compile Include="CdomTests.cs" />
     <Compile Include="IronTests.cs" />
-    <Compile Include="McaTests.cs" />
     <Compile Include="VsaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,10 +57,6 @@
     <ProjectReference Include="..\NetScript.Impl.Iron\NetScript.Impl.Iron.csproj">
       <Project>{A7776FA5-88C9-411F-A9B6-10F6692301C8}</Project>
       <Name>NetScript.Impl.Iron</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetScript.Impl.Mca\NetScript.Impl.Mca.csproj">
-      <Project>{B313C132-7F8E-488C-988A-ADA76DA3086D}</Project>
-      <Name>NetScript.Impl.Mca</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetScript.Impl.Vsa\NetScript.Impl.Vsa.csproj">
       <Project>{57457658-EDB4-4262-BDAA-320D1B3D40E7}</Project>
