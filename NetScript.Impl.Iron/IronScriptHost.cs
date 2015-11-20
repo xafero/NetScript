@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
 using Microsoft.Scripting.Hosting;
 using NetScript.API;
 
@@ -12,6 +14,11 @@ namespace NetScript.Impl.Iron
 		public IronScriptHost(string lang)
 		{
 			engine = IronHelper.CreateEngine(lang);
+		}
+		
+		public object Eval(TextReader reader)
+		{
+			return engine.Execute(reader.ReadToEnd());
 		}
 		
 		public void Dispose()

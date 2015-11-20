@@ -19,8 +19,11 @@ namespace NetScript.Test
 		[Test]
 		public void GetPythonHost()
 		{
-			IScriptHost host = new IronScriptHost("Python");
-			Assert.IsNotNull(host);
+			using (IScriptHost host = new IronScriptHost("Python"))
+			{
+				Assert.IsNotNull(host);
+				Assert.AreEqual(host.Eval("[x**2 for x in range(4)]"), new [] { 0,1,4,9 });
+			}
 		}
 		
 		[Test]
@@ -34,8 +37,11 @@ namespace NetScript.Test
 		[Test]
 		public void GetRubyHost()
 		{
-			IScriptHost host = new IronScriptHost("Ruby");
-			Assert.IsNotNull(host);
+			using (IScriptHost host = new IronScriptHost("Ruby"))
+			{
+				Assert.IsNotNull(host);
+				Assert.AreEqual(host.Eval("(1..3).map { |i| 2 * i }"), new [] { 2,4,6 });
+			}
 		}
 	}
 }

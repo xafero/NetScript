@@ -35,6 +35,8 @@
   <ItemGroup>
     <Compile Include="IScriptHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptException.cs" />
+    <Compile Include="ScriptExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

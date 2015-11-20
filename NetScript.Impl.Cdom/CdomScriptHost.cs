@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 
 using NetScript.API;
 
@@ -13,6 +14,11 @@ namespace NetScript.Impl.Cdom
 		public CdomScriptHost(string lang)
 		{
 			provider = CdomHelper.CreateProvider(lang);
+		}
+		
+		public object Eval(TextReader reader)
+		{
+			throw new NotImplementedException();
 		}
 		
 		public void Dispose()

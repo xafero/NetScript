@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Microsoft.Vsa;
 using NetScript.API;
 
@@ -25,6 +26,11 @@ namespace NetScript.Impl.Vsa
 			engine.InitNew();
 			engine.RootNamespace = nameSpace;
 			engine.Name = lang.Replace(" ", "");
+		}
+		
+		public object Eval(TextReader reader)
+		{
+			throw new NotImplementedException();
 		}
 		
 		public void Dispose()
