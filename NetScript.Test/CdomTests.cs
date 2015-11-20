@@ -36,8 +36,19 @@ namespace NetScript.Test
 		[Test]
 		public void GetCsHost()
 		{
-			IScriptHost host = new CdomScriptHost("C#");
-			Assert.IsNotNull(host);
+			using (IScriptHost host = new CdomScriptHost("C#"))
+			{
+				Assert.IsNotNull(host);
+				var code = "public class Person { "+
+					"public string Name { get; set; } "+
+					"public int Age { get; set; } "+
+					"public Person(string name, int age) { "+
+					"   Name = name; "+
+					"   Age = age; "+
+					"} }";
+				var type = host.Eval(code);
+				Assert.AreEqual(type+"", "Person");
+			}
 		}
 		
 		[Test]

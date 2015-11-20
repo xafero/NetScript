@@ -2,6 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 using NetScript.API;
 
@@ -18,7 +19,22 @@ namespace NetScript.Impl.Cdom
 		
 		public object Eval(TextReader reader)
 		{
-			throw new NotImplementedException();
+			return Eval(reader.ReadToEnd());
+		}
+		
+		private object Eval(string code)
+		{
+			var cp = new CompilerParameters {
+				GenerateInMemory = true
+			};
+			var res = provider.CompileAssemblyFromSource(cp, code);
+			if (res.Errors.HasErrors)
+				throw new ScriptException(res.Errors);
+			var ass = res.CompiledAssembly;
+			var types = ass.GetTypes();
+			if (types.Length == 1)
+				return types.First();
+			return types;
 		}
 		
 		public void Dispose()
